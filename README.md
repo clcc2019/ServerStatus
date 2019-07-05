@@ -25,8 +25,9 @@
 
 【服务端】：
 ```bash
+https://github.com/clcc2019/ServerStatus.git
 wget https://raw.githubusercontent.com/cppla/ServerStatus/master/autodeploy/config.json
-docker run -d --restart=always --name=serverstatus -v {$path}/config.json:/ServerStatus/server/config.json -p {$port}:80 -p {$port}:35601 cppla/serverstatus
+docker run -d --restart=always --name=serverstatus -v {$path}/config.json:/ServerStatus/server/config.json -p {$port}:80 -p {$port}:35601 clcc2019/ServerStatus
 
 eg:
 docker run -d --restart=always --name=serverstatus -v ~/config.json:/ServerStatus/server/config.json -p 80:80 -p 35601:35601 cppla/serverstatus
